@@ -63,6 +63,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		821532B9299C36A800F0822B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		82E72E7A299B9ECC00F2B6EA = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +89,7 @@
 		82E72E85299B9ECC00F2B6EA /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				821532B9299C36A800F0822B /* ViewModel */,
 				82E72E86299B9ECC00F2B6EA /* MovieAppApp.swift */,
 				821532B4299C280B00F0822B /* Service */,
 				821532B2299C27DE00F0822B /* View */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieView: View {
-    let movies: [Movie]
+    @State var movies: [Movie] = []
     
     var body: some View {
         List(movies) { movie in
@@ -31,12 +31,20 @@ struct MovieView: View {
             }
             .padding()
         }
+        .task {
+            do {
+                let service = MoviesService()
+                movies = try await service.getMoviesFromAPI()
+            } catch {
+                print(error)
+            }
+            
+        }
     }
 }
 
 struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
-        let movie = [Movie].mock
-        MovieView(movies: movie)
+        MovieView()
     }
 }
