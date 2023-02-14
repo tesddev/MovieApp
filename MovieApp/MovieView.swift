@@ -8,33 +8,35 @@
 import SwiftUI
 
 struct MovieView: View {
-    let movie: Movie
+    let movies: [Movie]
     
     var body: some View {
-        HStack {
-            AsyncImage(url: movie.posterURL) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            } placeholder: {
-                ProgressView()
+        List(movies) { movie in
+            HStack {
+                AsyncImage(url: movie.posterURL) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 80)
+                
+                VStack(alignment: .leading){
+                    Text(movie.title)
+                        .font(.headline)
+                    Text(movie.overview)
+                        .lineLimit(4)
+                }
             }
-            .frame(width: 80)
-            
-            VStack(alignment: .leading){
-                Text(movie.title)
-                    .font(.headline)
-                Text(movie.overview)
-                    .lineLimit(4)
-            }
+            .padding()
         }
-        .padding()
     }
 }
 
 struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
-        let movie = Movie.mock
-        MovieView(movie: movie)
+        let movie = [Movie].mock
+        MovieView(movies: movie)
     }
 }
