@@ -12,6 +12,9 @@ struct Movie {
     let title: String
     let overview: String
     let posterPath: String
+    var posterURL: URL? {
+        URL(string: "https://image.tmdb.org/t/p/w400/\(posterPath)")
+    }
 }
 
 extension Movie {

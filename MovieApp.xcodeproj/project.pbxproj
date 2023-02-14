@@ -55,9 +55,9 @@
 			children = (
 				82E72E86299B9ECC00F2B6EA /* MovieAppApp.swift */,
 				82E72E88299B9ECC00F2B6EA /* MovieView.swift */,
+				82E72E94299B9F5B00F2B6EA /* Movie.swift */,
 				82E72E8A299B9ECD00F2B6EA /* Assets.xcassets */,
 				82E72E8C299B9ECD00F2B6EA /* Preview Content */,
-				82E72E94299B9F5B00F2B6EA /* Movie.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
