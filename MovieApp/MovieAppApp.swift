@@ -11,7 +11,7 @@ import SwiftUI
 struct MovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            MovieView()
+            MovieView(movie: Movie.mock)
         }
     }
 }

@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct MovieView: View {
+    let movie: Movie
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack(alignment: .leading){
+            Text(movie.title)
+                .font(.headline)
+            Text(movie.overview)
         }
         .padding()
     }
@@ -21,6 +22,7 @@ struct MovieView: View {
 
 struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieView()
+        let movie = Movie.mock
+        MovieView(movie: movie)
     }
 }
