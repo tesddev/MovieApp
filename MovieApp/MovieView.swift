@@ -17,7 +17,7 @@ struct MovieView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             } placeholder: {
-                
+                ProgressView()
             }
             .frame(width: 80)
             
