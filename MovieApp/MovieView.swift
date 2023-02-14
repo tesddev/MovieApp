@@ -11,12 +11,15 @@ struct MovieView: View {
     let movie: Movie
     
     var body: some View {
-        VStack(alignment: .leading){
-            Text(movie.title)
-                .font(.headline)
-            Text(movie.overview)
+        HStack {
+            AsyncImage(url: movie.posterURL)
+            VStack(alignment: .leading){
+                Text(movie.title)
+                    .font(.headline)
+                Text(movie.overview)
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
