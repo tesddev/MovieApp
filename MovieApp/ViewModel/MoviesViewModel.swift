@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+@MainActor
+class MoviesViewModel: ObservableObject {
+    
+}
