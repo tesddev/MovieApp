@@ -27,7 +27,6 @@ struct MovieView: View {
                 Text(movie.overview)
                     .lineLimit(4)
             }
-            .padding()
         }
         .padding()
     }
