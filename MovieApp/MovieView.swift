@@ -2,12 +2,12 @@
 //  ContentView.swift
 //  MovieApp
 //
-//  Created by GIGL iOS on 14/02/2023.
+//  Created by Tes on 14/02/2023.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MovieView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +19,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MovieView()
     }
 }
