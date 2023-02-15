@@ -31,9 +31,6 @@ struct MoviesView: View {
             }
 
         }
-        .toolbar(content: {
-            ShareLink(item: "www.fb.com")
-        })
         .navigationTitle("Upcoming Movies")
         .task {
             await viewModel.loadMovies()
