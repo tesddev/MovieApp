@@ -22,6 +22,7 @@ struct MoviesView: View {
             }
 
         }
+        .navigationTitle("Upcoming Movies")
         .task {
             await viewModel.loadMovies()
         }
@@ -58,6 +59,8 @@ struct MoviesView: View {
 
 struct MoviesView_Previews: PreviewProvider {
     static var previews: some View {
-        MoviesView()
+        NavigationView {
+            MoviesView()
+        }
     }
 }
