@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieCreditResponse: Decodable {
+struct MovieCreditsResponse: Decodable {
     let cast: [MovieCastMember]
 }
 
