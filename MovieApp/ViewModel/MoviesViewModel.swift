@@ -14,7 +14,7 @@ class MoviesViewModel: ObservableObject {
         case loaded(movies: [Movie])
         case error(Error)
     }
-    @Published var state: States = .loading
+    @Published var state: States = .loaded(movies: .mock)
     let service = MoviesService()
     
     func loadMovies() async {
