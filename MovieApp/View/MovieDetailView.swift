@@ -2,7 +2,7 @@
 //  MovieDetailView.swift
 //  MovieApp
 //
-//  Created by GIGL iOS on 15/02/2023.
+//  Created by Tes on 15/02/2023.
 //
 
 import SwiftUI
