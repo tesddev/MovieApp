@@ -11,12 +11,35 @@ struct MovieDetailView: View {
     let movie: Movie
     @State var cast: [MovieCastMember] = []
     var body: some View {
-        List(cast) { cast in
-            VStack(alignment: .leading){
-                Text(cast.character)
-                Text(cast.name)
-                    .font(.caption)
+
+        List {
+            Section {
+                HStack {
+                    AsyncImage(url: movie.posterURL) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(height: 220)
+                    
+                    Text(movie.overview)
+                }
             }
+            ForEach(cast) { cast in
+                VStack(alignment: .leading){
+                    Text(cast.character)
+                    Text(cast.name)
+                        .font(.caption)
+                }
+            }
+        }
+        .task {
+            do {
+                let service = CastService()
+                cast = try await service.getCast(of: movie)
+            } catch {}
         }
     }
 }
