@@ -35,6 +35,10 @@ struct MovieDetailView: View {
                 }
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar{
+            ShareLink(item: (movie.posterURL ?? URL(string: "fb.com"))!)
+        }
         .navigationTitle(movie.title)
         .task {
             do {
