@@ -16,7 +16,16 @@ struct MoviesView: View {
             case .loading:
                 ProgressView()
             case .error(let error):
-                Text(error.localizedDescription)
+                VStack{
+                    Text(error.localizedDescription)
+                    
+                    Button("Retry") {
+                        Task {
+                            viewModel.state = .loading
+                            await viewModel.loadMovies()
+                        }
+                    }
+                }
             case .loaded(let movies):
                 listOf(movies: movies)
             }
