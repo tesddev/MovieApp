@@ -35,6 +35,7 @@ struct MovieDetailView: View {
                 }
             }
         }
+        .navigationTitle(movie.title)
         .task {
             do {
                 let service = CastService()
