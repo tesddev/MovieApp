@@ -10,8 +10,8 @@ import SwiftUI
 struct MovieDetailView: View {
     let movie: Movie
     @State var cast: [MovieCastMember] = []
+    @StateObject var viewModel = MovieCastViewModel()
     var body: some View {
-
         List {
             Section {
                 HStack {
@@ -38,15 +38,17 @@ struct MovieDetailView: View {
         .navigationTitle(movie.title)
         .task {
             do {
-                let service = CastService()
-                cast = try await service.getCast(of: movie)
+                cast = try await viewModel.loadMovieCastsOf(movie: movie)
             } catch {}
         }
+        
     }
 }
 
 struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailView(movie: .mock, cast: .mock)
+//        MovieDetailView(movie: .mock, cast: .mock)
+        MovieDetailView(movie: .mock)
+
     }
 }
