@@ -2,9 +2,9 @@
 //  Secret.swift
 //  MovieApp
 //
-//  Created by GIGL iOS on 14/02/2023.
+//  Created by Tes on 14/02/2023.
 //
 
 import Foundation
 
-let apiKey = "fa9bc8815fb0fc61d5ef6b3da297a009"
+let apiKey = "ac7c844bf97f077b1e7820a068d19fd4rmv"
