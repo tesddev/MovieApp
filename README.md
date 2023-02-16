@@ -2,8 +2,8 @@
 
 #### Technologies used include and not limited to: 
 
-Xcode
-SwiftUI
+- Xcode <br>
+- SwiftUI
 
 Below is a short demo
 
