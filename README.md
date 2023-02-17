@@ -1,9 +1,13 @@
 # MovieApp
 
+#### Description
+This app just basically shows upcoming movies and details of each of them when navigated to. It was made with swiftUI, adopted async await for the network call, used NavigationView for base navigation, adopted MVVM architechture, ViewBuilder method of building reusable views and AsyncImage for loading image from URL.
+
 #### Technologies used include and not limited to: 
 
 - Xcode <br>
-- SwiftUI
+- SwiftUI <br>
+- MVVM
 
 Below is a short demo
 
